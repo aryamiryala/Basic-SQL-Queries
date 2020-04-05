@@ -1,0 +1,35 @@
+drop table INSTRUCTOR;
+
+
+create table INSTRUCTOR(
+      INS_ID integer PRIMARY KEY NOT NULL, 
+      COUNTRY char(2),
+      FIRSTNAME varchar(15) NOT NULL,
+      LASTNAME varchar(15) NOT NULL,
+      CITY varchar(15) NOT NULL
+
+
+);
+INSERT INTO INSTRUCTOR
+     (INS_ID, LASTNAME, FIRSTNAME, CITY, COUNTRY)
+
+VALUES
+  (1, 'AHUJA', 'RAV', 'TORONTO', 'CANADA');
+  
+INSERT INTO INSTRUCTOR
+     VALUES
+       (2, 'CHONG', 'RAUL', 'CHICAGO', 'UNITED STATES'),
+       (3, 'VASUDEVAN', 'HIMA', 'TORONTO', 'CANADA');
+ 
+ select * from INSTRUCTOR;
+ 
+ select  FIRSTNAME, LASTNAME, COUNTRY from INSTRUCTOR where CITY = 'TORONTO';
+ 
+ UPDATE INSTRUCTOR SET CITY = 'MARKHAM' where INS_ID = 1;
+ 
+ DELETE FROM INSTRUCTOR where INS_ID = 2;
+ 
+ select * from INSTRUCTOR;
+ 
+ 
+    
